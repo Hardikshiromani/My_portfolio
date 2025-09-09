@@ -38,6 +38,9 @@ export default defineConfig({
   // css: {
   //   postcss: './postcss.config.cjs', // Correct placement
   // },
+ css: {
+    devSourcemap: false, // ✅ disables CSS source maps
+  },
 
   optimizeDeps: {
     exclude: ['vite/modulepreload-polyfill'], // Correct placement
