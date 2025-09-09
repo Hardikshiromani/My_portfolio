@@ -54,7 +54,7 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="relative inset-0 overflow-hidden  py-16 bg-gray-900 text-white">
+    <section id="projects" className="relative inset-0 overflow-hidden  py-16 bg-gray-950 text-white">
       {/* <h2 className="text-4xl font-bold text-center mb-12 ">My Projects</h2> */}
       {/* <h2 className="text-4xl  text-center mb-14 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent transition duration-200">My Projects</h2> */}
        {/* <div className="relative inset-0 overflow-hidden pointer-events-none"> */}
@@ -63,9 +63,31 @@ const ProjectsSection = () => {
     {/* Right semicircle */}
     {/* <div className="absolute -right-32 top-2/3 h-96 w-96 rounded-full bg-pink-500/20 blur-3xl"></div> */}
 
-    <div className="absolute top-10 -left-20 w-72 h-72 bg-gradient-to-tr from-cyan-500/40 to-purple-600/40 rounded-full blur-3xl animate-pulse"></div>
-  <div className="absolute bottom-10 -right-20 w-72 h-72 bg-gradient-to-bl from-purple-500/40 to-cyan-600/40 rounded-full blur-3xl animate-pulse"></div>
+    {/* <div className="absolute top-10 -left-20 w-72 h-72 bg-gradient-to-tr from-cyan-500/40 to-purple-600/40 rounded-full blur-3xl animate-pulse"></div> */}
+  {/* <div className="absolute bottom-10 -right-20 w-72 h-72 bg-gradient-to-bl from-purple-500/40 to-cyan-600/40 rounded-full blur-3xl animate-pulse"></div> */}
   {/* </div> */}
+
+{/*   
+<div className="absolute left-0 top-1/2 -translate-y-1/2 
+                  w-72 h-72 rounded-sm
+                  bg-gradient-to-r from-blue-500/30 to-transparent 
+                  blur-3xl"></div> */}
+
+  {/* Right semicircle */}
+  {/* <div className="absolute right-0 top-1/2 -translate-y-1/2 
+                  w-72 h-72 rounded-sm
+                  bg-gradient-to-l from-cyan-500/30 to-transparent 
+                  blur-3xl"></div> */}
+
+                                 
+<div  className="absolute -left-10 md:-left-32 lg:-left-48 top-1/2 -translate-y-1/2 
+             h-80 w-80 md:h-96 md:w-96 rounded-full 
+             bg-blue-500/30 blur-3xl"></div>
+
+             
+  <div  className="absolute -right-10 md:-right-32 lg:-rightt-48 top-1/2 -translate-y-1/2 
+             h-80 w-80 md:h-96 md:w-96 rounded-full 
+             bg-cyan-500/30 blur-3xl"></div> 
     <h2 className=" text-xl bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">Projects</h2>
  
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto px-4">
@@ -91,7 +113,7 @@ const ProjectsSection = () => {
               <p className="text-gray-300 text-base leading-relaxed mb-4">
                 {project.description}
               </p>
-              <button className="px-4 py-2 rounded-lg  bg-cyan-400 text-white gap-2 mr-2">See Code</button>
+              <button onClick= "https://github.com/Hardikshiromani/My_portfolio" className="px-4 py-2 rounded-lg  bg-cyan-400 text-white gap-2 mr-2">See Code</button>
               <button className="px-4 py-2 rounded-lg  bg-slate-500 text-white ml-2">Live Demo</button>
    
             </div>

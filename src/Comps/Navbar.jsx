@@ -17,8 +17,10 @@ const Navbar = () => {
         </ul>
         
       </nav> */}
-      <nav className="flex justify-between px-6 py-5 fixed top-0 w-full bg-gray-900 bg-opacity-90 shadow-md z-50">
-        <h1 className="animate-text-gradient bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-[length:200%_auto] bg-clip-text text-transparent font-sans text-4xl">MyPortfolio</h1>
+      <nav className="flex justify-between px-6 py-5 fixed top-0 w-full bg-gray-950 bg-opacity-90 shadow-md z-50">
+        <h1 className="animate-text-gradient bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-[length:200%_auto] bg-clip-text text-transparent font-sans text-4xl">
+          MyPortfolio
+        </h1>
 
         <ul className="flex space-x-8 items-center">
           <li>

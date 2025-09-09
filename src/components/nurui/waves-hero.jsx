@@ -115,11 +115,19 @@ const WavesHero = () => {
 
       {/* Animated Background */}
       <div className="absolute inset-0 z-[1]">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
           className="absolute -left-1/4 top-1/4 h-96 w-96 rounded-full bg-blue-600/30 blur-3xl"
+        /> */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="absolute -left-10 md:-left-32 lg:-left-48 top-1/2 -translate-y-1/2 
+             h-80 w-80 md:h-96 md:w-96 rounded-full 
+             bg-blue-500/30 blur-3xl"
         />
         <motion.div
           initial={{ opacity: 0 }}
@@ -127,11 +135,20 @@ const WavesHero = () => {
           transition={{ duration: 2, delay: 1 }}
           className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-black/40 blur-3xl"
         />
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2, delay: 0.5 }}
           className="absolute -right-1/4 top-1/2 h-96 w-96 rounded-full bg-cyan-400/30 blur-3xl"
+        /> */}
+        {/* Right circle */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 0.5 }}
+          className="absolute -right-10 md:-right-32 lg:-right-48 top-1/2 -translate-y-1/2 
+             h-80 w-80 md:h-96 md:w-96 rounded-full 
+             bg-cyan-400/30 blur-3xl"
         />
       </div>
 
@@ -144,36 +161,36 @@ const WavesHero = () => {
           className="mx-auto max-w-3xl space-y-8"
         >
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-            Hello I'm 
+            Hello I'm
           </h1>
           {/* <p className="mx-auto max-w-2xl text-muted text-gray-400 sm:text-xl">
             Nuestra plataforma le permite a tu negocio tener acceso a rieles de
             pagos internacionales en segundos en vez de horas
           </p> */}
           <div className="text-4xl font-bold mb-6 text-green-400">
-          <Typewriter
-            options={{
-              strings: [
-                "Full Stack Developer",
-                "React Enthusiast",
-                "API Architect",
-              ],
-              autoStart: true,
-              loop: true,
-              delay: 75,
-            }}
-          />
-        </div>
+            <Typewriter
+              options={{
+                strings: [
+                  "Full Stack Web Developer",
+                  "React Enthusiast",
+                  "API Architect",
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 75,
+              }}
+            />
+          </div>
           <div className="flex justify-center space-x-4">
             <Button className="bg-gradient-to-r from-cyan-400 to-violet-500 text-lg text-black hover:from-cyan-500 hover:to-violet-600">
-              Comenzar
+              See Projects
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               variant="outline"
               className="border-white/10 text-lg text-white hover:bg-white/10"
             >
-              Saber Más
+              Connect
             </Button>
           </div>
         </motion.div>

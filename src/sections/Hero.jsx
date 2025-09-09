@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className=" relative overflow-hidden inset-0 min-h-screen w-screen bg-gray-900 text-white flex flex-col"
+      className=" relative overflow-hidden inset-0 min-h-screen w-screen bg-gray-950 text-white flex flex-col"
     >
       {/* Hero Content */}
       <Navbar />

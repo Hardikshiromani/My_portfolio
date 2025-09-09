@@ -8,17 +8,30 @@ const About = () => {
     //   >
     <section
   id="about"
-  className=" relative overflow-x-hidden inset-0 min-h-screen w-screen bg-gray-900 text-white flex flex-col items-center px-6 py-16 gap-6"
+  className=" relative overflow-x-hidden inset-0 min-h-screen w-screen bg-gray-950 text-white flex flex-col items-center px-6 py-16 gap-6"
 >
    {/* <div className="absolute top-10 -left-20 w-72 h-72 bg-gradient-to-tr from-cyan-500/40 to-purple-600/40 rounded-full blur-3xl animate-pulse"></div> */}
   {/* <div className="absolute top-10 -right-20 w-72 h-72 bg-gradient-to-bl from-green-500/40 to-cyan-600/40 rounded-full blur-3xl animate-pulse"></div> */}
  
- <div className="absolute top-0 left-0 w-96 h-96 
-                bg-cyan-500/30 rounded-full blur-3xl"></div>
+ 
 
-<div className="absolute bottom-0 right-0 w-96 h-96 
-                bg-green-600/30 rounded-full blur-3xl"></div>
+{/* <div className="absolute left-0 top-1/2 -translate-y-1/2 
+                  w-72 h-72 rounded-sm
+                  bg-gradient-to-r from-blue-500/30 to-transparent 
+                  blur-3xl"></div> */}
 
+<div  className="absolute -left-10 md:-left-32 lg:-left-48 top-1/2 -translate-y-1/2 
+             h-80 w-80 md:h-96 md:w-96 rounded-full 
+             bg-blue-500/30 blur-3xl"></div>
+  {/* Right semicircle */}
+  {/* <div className="absolute right-0 top-1/2 -translate-y-1/2 
+                  w-72 h-72 rounded-sm
+                  bg-gradient-to-l from-cyan-500/30 to-transparent 
+                  blur-3xl"></div> */}
+
+  <div  className="absolute -right-10 md:-right-32 lg:-rightt-48 top-1/2 -translate-y-1/2 
+             h-80 w-80 md:h-96 md:w-96 rounded-full 
+             bg-cyan-500/30 blur-3xl"></div>                
     <h2 className="text-4xl md:text-6xl font-bold mb-8 text-cyan-400 mt-4">About Me</h2>
 
 <p className="text-gray-300 leading-relaxed text-center font-semibold text-xl">
