@@ -36,7 +36,7 @@ export default defineConfig({
   },
 
   css: {
-    postcss: './postcss.config.js', // Correct placement
+    postcss: './postcss.config.cjs', // Correct placement
   },
 
   optimizeDeps: {
