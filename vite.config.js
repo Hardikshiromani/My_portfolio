@@ -35,9 +35,9 @@ export default defineConfig({
     },
   },
 
-  css: {
-    postcss: './postcss.config.cjs', // Correct placement
-  },
+  // css: {
+  //   postcss: './postcss.config.cjs', // Correct placement
+  // },
 
   optimizeDeps: {
     exclude: ['vite/modulepreload-polyfill'], // Correct placement
