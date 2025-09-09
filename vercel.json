@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "POSTCSS_IGNORE_UNKNOWN": "true"
+    }
+  }
+}
