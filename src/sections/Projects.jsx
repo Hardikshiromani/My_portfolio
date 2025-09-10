@@ -17,8 +17,8 @@
 
 import React from "react";
 import Todo from "../assets/Todo.png"
-import Weatherapp from "../assets/Weatherapp.png"
-import Chatworld from "../assets/ChatWorld.png"
+import Weather from "../assets/Weather.png"
+import Chat from "../assets/Chat.png"
 
 const projects = [
   {
