@@ -1,21 +1,19 @@
-// import { defineConfig } from "vite";
-// import react from "@vitejs/plugin-react";
-// import path from "path";
-// // https://vite.dev/config/
-// export default defineConfig({
-//   base: "./", // 👈 Ensures relative paths for assets
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+// https://vite.dev/config/
+export default defineConfig({
+  base: "./", // 👈 Ensures relative paths for assets
 
-//   plugins: [react()],
-//   resolve: {
-//     alias: {
-//       "@": path.resolve(__dirname, "src"),
-//     },
-//     css: {
-//       postcss: "./postcss.config.js", // ensure postcss config is loaded
-//     },
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
    
-//   },
-// });
+   
+  },
+});
 
 
 // import { defineConfig } from 'vite';
@@ -89,27 +87,27 @@
 // });
 
 
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
+// import { defineConfig } from "vite";
+// import react from "@vitejs/plugin-react";
+// import path from "path";
 
-export default defineConfig({
-  base: "./",
+// export default defineConfig({
+//   base: "./",
 
-  plugins: [react()],
+//   plugins: [react()],
 
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
-    },
-  },
+//   resolve: {
+//     alias: {
+//       "@": path.resolve(__dirname, "src"),
+//     },
+//   },
 
-  css: {
-    postcss: {
-      plugins: [
-        require("tailwindcss"),
-        require("autoprefixer"),
-      ],
-    },
-  },
-});
+//   css: {
+//     postcss: {
+//       plugins: [
+//         require("tailwindcss"),
+//         require("autoprefixer"),
+//       ],
+//     },
+//   },
+// });
