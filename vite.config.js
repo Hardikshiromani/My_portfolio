@@ -1,23 +1,21 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
-// https://vite.dev/config/
-export default defineConfig({
-  base: "./", // 👈 Ensures relative paths for assets
+// import { defineConfig } from "vite";
+// import react from "@vitejs/plugin-react";
+// import path from "path";
+// // https://vite.dev/config/
+// export default defineConfig({
+//   base: "./", // 👈 Ensures relative paths for assets
 
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
-    },
-    css: {
-      postcss: "./postcss.config.js", // ensure postcss config is loaded
-    },
-    optimizeDeps: {
-      exclude: ["vite/modulepreload-polyfill"],
-    },
-  },
-});
+//   plugins: [react()],
+//   resolve: {
+//     alias: {
+//       "@": path.resolve(__dirname, "src"),
+//     },
+//     css: {
+//       postcss: "./postcss.config.js", // ensure postcss config is loaded
+//     },
+   
+//   },
+// });
 
 
 // import { defineConfig } from 'vite';
@@ -70,12 +68,22 @@ export default defineConfig({
 //   },
 // })
 
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
-// import { defineConfig } from "vite";
-// import react from "@vitejs/plugin-react";
+export default defineConfig({
+  base: "./", // Ensures relative paths for assets
 
-// // https://vitejs.dev/config/
-// export default defineConfig({
-//   plugins: [react()],
-// });
+  plugins: [react()],
 
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
+
+  css: {
+    postcss: "./postcss.config.js", // ✅ put it here, not inside resolve
+  },
+});
