@@ -1,23 +1,23 @@
-// import { defineConfig } from "vite";
-// import react from "@vitejs/plugin-react";
-// import path from "path";
-// // https://vite.dev/config/
-// export default defineConfig({
-//   base: "./", // 👈 Ensures relative paths for assets
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+// https://vite.dev/config/
+export default defineConfig({
+  base: "./", // 👈 Ensures relative paths for assets
 
-//   plugins: [react()],
-//   resolve: {
-//     alias: {
-//       "@": path.resolve(__dirname, "src"),
-//     },
-//     css: {
-//       postcss: "./postcss.config.js", // ensure postcss config is loaded
-//     },
-//     optimizeDeps: {
-//       exclude: ["vite/modulepreload-polyfill"],
-//     },
-//   },
-// });
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+    css: {
+      postcss: "./postcss.config.js", // ensure postcss config is loaded
+    },
+    optimizeDeps: {
+      exclude: ["vite/modulepreload-polyfill"],
+    },
+  },
+});
 
 
 // import { defineConfig } from 'vite';
@@ -48,24 +48,34 @@
 // });
 
 
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import PostCSSFilter from './vite.postcss-filter.js'
-export default defineConfig({
-  plugins: [react(),, PostCSSFilter()],
-  css: {
-    postcss: './postcss.config.cjs',
-  },
-  build: {
-    rollupOptions: {
-      // exclude polyfill from css parsing
-      onwarn(warning, warn) {
-        if (warning.code === 'UNUSED_EXTERNAL_IMPORT') return
-        warn(warning)
-      },
-    },
-  },
-  optimizeDeps: {
-    exclude: ['vite/modulepreload-polyfill.js'],
-  },
-})
+// import { defineConfig } from 'vite'
+// import react from '@vitejs/plugin-react'
+// import PostCSSFilter from './vite.postcss-filter.js'
+// export default defineConfig({
+//   plugins: [react(),, PostCSSFilter()],
+//   css: {
+//     postcss: './postcss.config.cjs',
+//   },
+//   build: {
+//     rollupOptions: {
+//       // exclude polyfill from css parsing
+//       onwarn(warning, warn) {
+//         if (warning.code === 'UNUSED_EXTERNAL_IMPORT') return
+//         warn(warning)
+//       },
+//     },
+//   },
+//   optimizeDeps: {
+//     exclude: ['vite/modulepreload-polyfill.js'],
+//   },
+// })
+
+
+// import { defineConfig } from "vite";
+// import react from "@vitejs/plugin-react";
+
+// // https://vitejs.dev/config/
+// export default defineConfig({
+//   plugins: [react()],
+// });
+
