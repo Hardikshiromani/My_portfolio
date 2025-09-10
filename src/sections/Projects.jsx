@@ -16,14 +16,14 @@
 // export default Projects
 
 import React from "react";
-import Todolist from "../assets/Todolist.png"
+import Todo from "../assets/Todo.png"
 import Weatherapp from "../assets/Weatherapp.png"
 import Chatworld from "../assets/ChatWorld.png"
 
 const projects = [
   {
     title: "TodoList",
-    image: Todolist, // replace with actual path
+    image: Todo, // replace with actual path
     tech: "React.js, HTML,CSS,Javascript,Bootstrap",
     description:
       "A responsive TodoList application built with React.js, HTML, and CSS, allowing users to create, add, and delete tasks with a clean and intuitive interface.",
