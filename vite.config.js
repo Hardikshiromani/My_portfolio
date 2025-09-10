@@ -20,29 +20,52 @@
 // });
 
 
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+// import { defineConfig } from 'vite';
+// import react from '@vitejs/plugin-react';
+// import path from 'path';
 
+// export default defineConfig({
+//   base: './', // Ensures relative paths for assets
+
+//   plugins: [react(),PostCSSFilter()],
+
+//   resolve: {
+//     alias: {
+//       '@': path.resolve(__dirname, 'src'),
+//     },
+//   },
+
+//   // css: {
+//   //   postcss: './postcss.config.cjs', // Correct placement
+//   // },
+//  css: {
+//     devSourcemap: false, // ✅ disables CSS source maps
+//   },
+
+//   optimizeDeps: {
+//     exclude: ['vite/modulepreload-polyfill'], // Correct placement
+//   },
+// });
+
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import PostCSSFilter from './vite.postcss-filter.js'
 export default defineConfig({
-  base: './', // Ensures relative paths for assets
-
-  plugins: [react()],
-
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
+  plugins: [react(),, PostCSSFilter()],
+  css: {
+    postcss: './postcss.config.cjs',
+  },
+  build: {
+    rollupOptions: {
+      // exclude polyfill from css parsing
+      onwarn(warning, warn) {
+        if (warning.code === 'UNUSED_EXTERNAL_IMPORT') return
+        warn(warning)
+      },
     },
   },
-
-  // css: {
-  //   postcss: './postcss.config.cjs', // Correct placement
-  // },
- css: {
-    devSourcemap: false, // ✅ disables CSS source maps
-  },
-
   optimizeDeps: {
-    exclude: ['vite/modulepreload-polyfill'], // Correct placement
+    exclude: ['vite/modulepreload-polyfill.js'],
   },
-});
+})
