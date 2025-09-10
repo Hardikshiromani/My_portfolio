@@ -13,6 +13,14 @@ export default defineConfig({
    
    
   },
+   build: {
+    modulePreload: {
+      polyfill: false,
+    },
+  },
+  optimizeDeps: {
+    exclude: ["vite/modulepreload-polyfill"], // still safe to include
+  },
 });
 
 
