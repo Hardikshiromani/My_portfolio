@@ -30,14 +30,14 @@ const projects = [
   },
   {
     title: "ChatWorld",
-    image: Chatworld,
+    image: Chat,
     tech: "React.js, Express.js,Node js,Firebase,JWL,Mysql,bootstrap",
     description:
       "ChatWorld is a real time chat web application where user can create their profile with mobile numbers and chat with another user in real time and they can do polling based messasging",
   },
   {
     title: "Weather",
-    image: Weatherapp,
+    image: Weather,
     tech: "HTML, CSS, JavaScript, React.js, Tailwind CSS",
     description:
       "A lightweight weather application that allows users to check real-time weather conditions for their city, including temperature, wind speed, and humidity levels."
