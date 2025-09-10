@@ -17,7 +17,7 @@
 
 import React from "react";
 import Todolist from "../assets/Todolist.png"
-import Weatherapp from "../assets/weatherapp.png"
+import Weatherapp from "../assets/Weatherapp.png"
 import Chatworld from "../assets/ChatWorld.png"
 
 const projects = [
@@ -55,7 +55,6 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section id="projects" className="relative inset-0 overflow-hidden  py-16 bg-gray-950 text-white">
-      {/* <h2 className="text-4xl font-bold text-center mb-12 ">My Projects</h2> */}
       {/* <h2 className="text-4xl  text-center mb-14 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent transition duration-200">My Projects</h2> */}
        {/* <div className="relative inset-0 overflow-hidden pointer-events-none"> */}
     {/* Left semicircle */}
