@@ -68,12 +68,33 @@
 //   },
 // })
 
+// import { defineConfig } from "vite";
+// import react from "@vitejs/plugin-react";
+// import path from "path";
+
+// export default defineConfig({
+//   base: "./", // Ensures relative paths for assets
+
+//   plugins: [react()],
+
+//   resolve: {
+//     alias: {
+//       "@": path.resolve(__dirname, "src"),
+//     },
+//   },
+
+//   css: {
+//     postcss: "./postcss.config.js", // ✅ put it here, not inside resolve
+//   },
+// });
+
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  base: "./", // Ensures relative paths for assets
+  base: "./",
 
   plugins: [react()],
 
@@ -84,6 +105,11 @@ export default defineConfig({
   },
 
   css: {
-    postcss: "./postcss.config.js", // ✅ put it here, not inside resolve
+    postcss: {
+      plugins: [
+        require("tailwindcss"),
+        require("autoprefixer"),
+      ],
+    },
   },
 });
