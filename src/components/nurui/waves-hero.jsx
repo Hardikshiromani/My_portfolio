@@ -183,14 +183,26 @@ const WavesHero = () => {
           </div>
           <div className="flex justify-center space-x-4">
             <Button className="bg-gradient-to-r from-cyan-400 to-violet-500 text-lg text-black hover:from-cyan-500 hover:to-violet-600">
+
+              <a
+                href="#projects"
+                // className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:text-white transition duration-200"
+              >
               See Projects
-              <ArrowRight className="ml-2 h-5 w-5" />
+
+              {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
+              </a>
             </Button>
             <Button
               variant="outline"
               className="border-white/10 text-lg text-white hover:bg-white/10"
             >
+              <a
+                href="#contacts"
+                // className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:text-white transition duration-200"
+              >
               Connect
+              </a>
             </Button>
           </div>
         </motion.div>

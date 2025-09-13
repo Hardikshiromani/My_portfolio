@@ -32,7 +32,7 @@ const About = () => {
   <div  className="absolute -right-10 md:-right-32 lg:-rightt-48 top-1/2 -translate-y-1/2 
              h-80 w-80 md:h-96 md:w-96 rounded-full 
              bg-cyan-500/30 blur-3xl"></div>                
-    <h2 className="text-4xl md:text-6xl font-bold mb-8 text-cyan-400 mt-4">About Me</h2>
+    <h2 className="text-4xl md:text-6xl font-semibold mb-8 bg-gradient-to-r from-blue-600 via-cyan-400  to-emerald-500 bg-clip-text text-transparent mt-4">About Me</h2>
 
 <p className="text-gray-300 leading-relaxed text-center font-semibold text-xl">
 I’m a Full-Stack Web Developer who thrives at the intersection of logic and creativity. From designing gradient-rich UIs to architecting scalable APIs, I enjoy transforming abstract ideas into immersive digital experiences.
@@ -46,7 +46,7 @@ I’m currently seeking opportunities as a Full-Stack Developer, Frontend Engine
     {/* </div> */}
 {/* <h2 className="text-4xl font-bold text-cyan-400 mb-6">Soft Skills</h2>
  */}
-    <h2 className="text-4xl md:text-6xl font-bold mb-12 text-cyan-400 mt-4">Soft Skills</h2>
+    <h5 className="text-4xl md:text-6xl font-semibold mb-12 text-cyan-400 mt-4">Soft Skills</h5>
 
 <div className="flex flex-wrap justify-center gap-6">
   {["Problem Solving", "Adaptability", "Deep Thinking", "Quick Learning"].map((skill, index) => (
