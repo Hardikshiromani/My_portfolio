@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { FaReact } from "react-icons/fa";
+import { FaCode } from "react-icons/fa6";
+// import { IoExtensionPuzzle } from "react-icons/io5";
+import { IoExtensionPuzzleOutline } from "react-icons/io5";
+import { VscTools } from "react-icons/vsc";
+import { FiDatabase } from "react-icons/fi";
+import { GiPlatform } from "react-icons/gi";
+// import { FaReact } from "react-icons/fa";
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("languages");
 
@@ -79,11 +85,11 @@ const SkillsSection = () => {
         name: "Tailwind",
         level: 85,
         color: "bg-gray-900",
-        barColor: "bg-blue-400",
+        barColor: "bg-cyan-500",
         hoverColor: "hover:border-blue-400 hover:shadow-blue-400/50",
       },
       {
-        icon: <i class="devicon-bootstrap-plain colored"></i>,
+        icon: <i className="devicon-bootstrap-plain colored"></i>,
         name: "Bootstrap",
         level: 85,
         color: "bg-gray-900",
@@ -127,7 +133,15 @@ const SkillsSection = () => {
         hoverColor: "hover:border-green-400 hover:shadow-green-400/50",
       },
     ],
-    ToolsandEnvironment: [
+    ToolsAndEnvironment: [
+      {
+        icon: <i class="devicon-nodejs-plain colored"></i>,
+        name: "Node,",
+        level: 70,
+        color: "bg-gray-900",
+        barColor: "bg-gradient-to-r from-lime-400 via-lime-500 to-lime-700",
+        hoverColor: "hover:border-lime-600 hover:shadow-lime-700/50",
+      },
       {
         icon: <i class="devicon-vscode-plain colored"></i>,
         name: "Vs code,",
@@ -161,62 +175,65 @@ const SkillsSection = () => {
         hoverColor: "hover:border-white-400 hover:shadow-white-400/50",
       },
     ],
-    PlatformsServices:[
-        {
-        icon: <i class="devicon-nodejs-plain colored"></i>,
-        name: "Node,",
-        level: 70,
-        color: "bg-gray-900",
-        barColor: "bg-gradient-to-r from-sky-400 via-sky-500 to-sky-600",
-        hoverColor: "hover:border-sky-400 hover:shadow-sky-400/50",
-      },
+    PlatformsServices: [
+      
       {
         icon: <i class="devicon-vercel-original"></i>,
         name: "Vercel,",
         level: 70,
         color: "bg-gray-900",
-        barColor: "bg-gradient-to-r from-sky-400 via-sky-500 to-sky-600",
-        hoverColor: "hover:border-sky-400 hover:shadow-sky-400/50",
+        barColor: "bg-white",
+        hoverColor: "hover:border-white hover:shadow-sky-400/50",
       },
-       {
+      {
         icon: <i class="devicon-netlify-plain colored"></i>,
         name: "netlify,",
         level: 70,
         color: "bg-gray-900",
-        barColor: "bg-gradient-to-r from-sky-400 via-sky-500 to-sky-600",
-        hoverColor: "hover:border-sky-400 hover:shadow-sky-400/50",
+        barColor: "bg-teal-400",
+        hoverColor: "hover:border-teal-300 hover:shadow-teal-400/50",
       },
-       {
-        icon:<i class="devicon-npm-original-wordmark colored"></i>,
+      {
+        icon: <i class="devicon-npm-original-wordmark colored"></i>,
         name: "NPM",
         level: 70,
         color: "bg-gray-900",
-        barColor: "bg-gradient-to-r from-sky-400 via-sky-500 to-sky-600",
+        barColor: "bg-gradient-to-r from-red-400 via-red-500 to-red-600",
         hoverColor: "hover:border-sky-400 hover:shadow-sky-400/50",
       },
-       {
-        icon:<i class="devicon-firebase-plain colored"></i>,
+      {
+        icon: <i class="devicon-firebase-plain colored"></i>,
         name: "firebase",
         level: 70,
         color: "bg-gray-900",
-        barColor: "bg-gradient-to-r from-sky-400 via-sky-500 to-sky-600",
-        hoverColor: "hover:border-sky-400 hover:shadow-sky-400/50",
-      }, 
+        barColor: "bg-yellow-400",
+        hoverColor: "hover:border-yellow-400 hover:shadow-yellow-400/50",
+      },
     ],
   };
 
+  const categoryIcons = {
+  "languages": <FaCode/>,
+  "libraries": <IoExtensionPuzzleOutline/>,   // 🧩
+  "ToolsAndEnvironment": <VscTools/>,    // 🧰
+  "databases": <FiDatabase/>,
+  "PlatformsServices": <GiPlatform/>,
+};
   const categories = Object.keys(skillsData);
 
   return (
-    <section className="py-10">
+    <section
+      className="py-10"
+      // className="relative overflow-x-hidden inset-0 min-h-screen w-screen bg-gray-950  text-white flex flex-col items-center px-6 py-16 gap-6"
+    >
       {/* <h2 className="text-4xl md:text-6xl font-semibold mb-8 bg-gradient-to-r from-blue-600 via-cyan-400  to-emerald-500 bg-clip-text text-transparent mt-4">About Me</h2> */}
 
-      <h2 className=" text-4xl bg-gradient-to-r from-blue-600 via-cyan-400  to-emerald-50 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">
+      <h2 className=" text-4xl bg-gradient-to-r from-blue-600   to-emerald-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">
         Skills
       </h2>
 
       {/* Tabs */}
-      <div className="flex justify-center space-x-6 mb-10">
+      {/* <div className="flex justify-center space-x-6 mb-10">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -231,10 +248,70 @@ const SkillsSection = () => {
             {cat.charAt(0).toUpperCase() + cat.slice(1)}
           </button>
         ))}
-      </div>
+      </div> */}
+       {/* Tabs */}
+  {/* <div className="flex flex-wrap justify-center gap-3 mb-10">
+    {categories.map((cat) => (
+      <button
+        key={cat}
+        onClick={() => setActiveCategory(cat)}
+        className={`flex items-center gap-2 px-3 py-2 sm:px-6 sm:py-3 rounded-full border text-sm sm:text-lg font-semibold transition 
+          ${
+            activeCategory === cat
+              ? "bg-blue-500 text-white shadow-md"
+              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+          }`}
+      > */}
+        {/* Icon always visible */}
+        {/* <span className="text-lg">add icon here later<FaCode/></span> */}
 
-      {/* Skill Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* Text only visible from sm breakpoint */}
+        {/* <span className="hidden sm:inline">
+          {cat.charAt(0).toUpperCase() + cat.slice(1)}
+        </span>
+      </button>
+    ))}
+  </div> */}
+<div className="flex justify-center space-x-4 mb-6">
+  {categories.map((cat) => (
+    <button
+      key={cat}
+      onClick={() => setActiveCategory(cat)}
+      className={`flex items-center justify-center w-12 h-12 md:w-auto md:h-auto 
+        px-0 md:px-6 py-0 md:py-3 rounded-full border text-lg font-semibold transition
+        ${
+          activeCategory === cat
+            ? "bg-blue-500 text-white shadow-md"
+            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+        }`}
+    >
+      {/* Icon */}
+      <span className="text-xl">{categoryIcons[cat]}</span>
+
+      {/* Show text only on md+ screens */}
+      <span className="hidden md:inline ml-2">
+        {cat.charAt(0).toUpperCase() + cat.slice(1)}
+      </span>
+    </button>
+  ))}
+</div>
+
+{/* On mobile: show selected category name under icons */}
+{/* <p className="text-center text-white font-semibold md:hidden mb-6">
+  {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
+</p> */}
+
+<p className=" text-sm bg-gradient-to-r from-cyan-400   to-emerald-500 bg-clip-text text-transparent md:text-2xl  mb-12  mt-4 text-center transition duration-200 ">
+  {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
+      </p>
+      <div
+        className="grid 
+      grid-cols-1   /* Mobile full width */
+      sm:grid-cols-2 
+      md:grid-cols-3 
+      gap-4 sm:gap-6 
+      max-w-6xl mx-auto px-2 sm:px-6"
+      >
         {skillsData[activeCategory].map((skill) => (
           <div
             key={skill.name}

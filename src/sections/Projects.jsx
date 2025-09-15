@@ -46,7 +46,11 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="relative inset-0 overflow-hidden  py-16 bg-gray-950 text-white">
+    <section id="projects"
+    //  className="relative inset-0 overflow-hidden  py-16 bg-gray-950 text-white"
+      className="relative overflow-x-hidden inset-0 min-h-screen w-screen bg-gray-950  text-white flex flex-col items-center px-6 py-16 gap-6"
+
+     >
       {/* <h2 className="text-4xl  text-center mb-14 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent transition duration-200">My Projects</h2> */}
        {/* <div className="relative inset-0 overflow-hidden pointer-events-none"> */}
     {/* Left semicircle */}
@@ -79,7 +83,7 @@ const ProjectsSection = () => {
   <div  className="absolute -right-10 md:-right-32 lg:-rightt-48 top-1/2 -translate-y-1/2 
              h-80 w-80 md:h-96 md:w-96 rounded-full 
              bg-cyan-500/30 blur-3xl"></div> 
-    <h3 className=" text-xl bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">Projects</h3>
+    <h3 className=" text-xl bg-gradient-to-r from-cyan-400 to-green-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">Projects</h3>
  
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto px-4">
       {/* <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8 max-w-4xl mx-auto px-4"> */}
@@ -88,7 +92,9 @@ const ProjectsSection = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-black/60 border border-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-cyan-500/40 hover:scale-105 transform transition duration-300"
+            // className="bg-black/60 border border-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-cyan-500/40 hover:scale-105 transform transition duration-300"
+            className="bg-black/60 border border-gray-700 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-cyan-500/40 flex flex-col"
+
           >
             <img
               src={project.image}
@@ -109,8 +115,45 @@ const ProjectsSection = () => {
    
             </div>
           </div>
+          
         ))}
       </div>
+      {/* <div className="flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-10 max-w-6xl mx-auto px-4">
+  {projects.map((project, index) => (
+    <div
+      key={index}
+      className="bg-black/60 border border-gray-700 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-cyan-500/40 flex flex-col w-full max-w-sm mx-auto"
+    >
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-52 object-cover"
+      />
+      <div className="p-4">
+        <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
+        <p className="text-xs text-cyan-400 font-medium mb-2">{project.tech}</p>
+        <p className="text-gray-300 text-sm leading-relaxed mb-3">
+          {project.description}
+        </p>
+        <div className="flex flex-col sm:flex-row gap-2">
+          <button
+            onClick={() => window.open(project.code, "_blank")}
+            className="w-full sm:w-auto px-4 py-2 rounded-lg bg-cyan-400 text-white"
+          >
+            See Code
+          </button>
+          <button
+            onClick={() => window.open(project.demo, "_blank")}
+            className="w-full sm:w-auto px-4 py-2 rounded-lg bg-slate-500 text-white"
+          >
+            Live Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  ))}
+</div> */}
+
     </section>
   );
 };

@@ -3,9 +3,34 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoLinkedinSquare } from "react-icons/bi";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+// import { EmailJSResponseStatus } from "@emailjs/browser";
 const Contacts = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_nebuhwh", // from EmailJS dashboard
+        "template_zumae6b", // from EmailJS template
+        form.current,
+        "0ZUWh9KO4oY5SvNz4" // from EmailJS account (Public key)
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully ✅");
+        },
+        (error) => {
+          console.log(error);
+          alert("Something went wrong ❌");
+        }
+      );
+  };
   return (
-    //  <section id="contacts"className="inset-0 min-h-screen w-screen bg-gray-900 text-white flex flex-col items-center px-6 py-16 gap-6">
     <section
       id="contacts"
       className="relative overflow-x-hidden inset-0 min-h-screen w-screen bg-gray-950  text-white flex flex-col items-center px-6 py-16 gap-6"
@@ -40,14 +65,13 @@ const Contacts = () => {
       <h2 className=" text-xl bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">
         Contacts
       </h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-14 w-full max-w-5xl mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-5xl mt-10">
         {/* Connect with Me */}
-        <div className="flex flex-col items-center text-center mr-12">
+        <div className="flex flex-col items-center text-center px-4">
           <h2 className="text-2xl font-semibold text-cyan-400 mb-6">
             Connect with Me
           </h2>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center justify-center gap-6 flex-wrap">
             <a
               href="mailto:your.email@example.com"
               className="p-4 bg-cyan-500 rounded-full hover:bg-cyan-600 transition text-white text-2xl"
@@ -55,7 +79,7 @@ const Contacts = () => {
               <MdOutlineEmail />
             </a>
             <a
-              href="https://twitter.com/yourhandle"
+              href="https://x.com/Hardik_1014"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 bg-blue-500 rounded-full hover:bg-blue-600 transition text-white text-2xl"
@@ -63,7 +87,7 @@ const Contacts = () => {
               <FaXTwitter />
             </a>
             <a
-              href="https://www.linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/hardik-shiromani123/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 bg-blue-700 rounded-full hover:bg-blue-800 transition text-white text-2xl"
@@ -82,23 +106,36 @@ const Contacts = () => {
         </div>
 
         {/* Send a Message */}
-        <div className="flex flex-col items-center text-center ml-12">
+        <div className="flex flex-col items-center text-center px-4">
           <h2 className="text-2xl font-semibold text-purple-400 mb-6">
             Send a Message
           </h2>
-          <form className="space-y-4 w-full max-w-md">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="space-y-4 w-full max-w-md"
+          >
             <input
               type="text"
               placeholder="Your Name"
+              name="Name"
               className="w-full px-4 py-2 bg-gray-800 text-white rounded-full"
             />
             <input
               type="email"
               placeholder="Your Email"
+              name="Email"
+              className="w-full px-4 py-2 bg-gray-800 text-white rounded-md"
+            />
+            <input
+              type="text"
+              placeholder="Subject"
+              name="Subject"
               className="w-full px-4 py-2 bg-gray-800 text-white rounded-md"
             />
             <textarea
               placeholder="Your Message"
+              name="Message"
               rows="5"
               className="w-full px-4 py-2 bg-gray-800 text-white rounded-md"
             ></textarea>

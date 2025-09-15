@@ -9,7 +9,9 @@ const Skills = () => {
     //   >
     <section
       id="skills"
-      className="relative overflow-hidden min-h-screen w-full bg-gray-950 text-white py-16"
+      // className="relative overflow-hidden min-h-screen w-full bg-gray-950 text-white py-16"
+      className="relative overflow-x-hidden inset-0 min-h-screen w-screen bg-gray-950  text-white flex flex-col items-center px-6 py-16 gap-6"
+
     >
   {/* <div className="absolute top-1/2 -left-0 w-72 h-72 bg-gradient-to-tr from-cyan-500/40 to-purple-600/40 rounded-full blur-3xl animate-pulse"></div> */}
   {/* <div className="absolute bottom-1/2 -right-0 w-72 h-72 bg-gradient-to-bl from-purple-500/40 to-cyan-600/40 rounded-full blur-3xl animate-pulse"></div> */}
