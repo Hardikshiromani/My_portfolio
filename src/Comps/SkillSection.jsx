@@ -176,7 +176,6 @@ const SkillsSection = () => {
       },
     ],
     PlatformsServices: [
-      
       {
         icon: <i class="devicon-vercel-original"></i>,
         name: "Vercel,",
@@ -213,12 +212,12 @@ const SkillsSection = () => {
   };
 
   const categoryIcons = {
-  "languages": <FaCode/>,
-  "libraries": <IoExtensionPuzzleOutline/>,   // 🧩
-  "ToolsAndEnvironment": <VscTools/>,    // 🧰
-  "databases": <FiDatabase/>,
-  "PlatformsServices": <GiPlatform/>,
-};
+    languages: <FaCode />,
+    libraries: <IoExtensionPuzzleOutline />, // 🧩
+    ToolsAndEnvironment: <VscTools />, // 🧰
+    databases: <FiDatabase />,
+    PlatformsServices: <GiPlatform />,
+  };
   const categories = Object.keys(skillsData);
 
   return (
@@ -232,77 +231,37 @@ const SkillsSection = () => {
         Skills
       </h2>
 
-      {/* Tabs */}
-      {/* <div className="flex justify-center space-x-6 mb-10">
+      <div className="flex justify-center space-x-4 mb-6">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-8 py-4 rounded-full border text-lg font-semibold transition 
-              ${
-                activeCategory === cat
-                  ? "bg-blue-500 text-white shadow-md"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-              }`}
-          >
-            {cat.charAt(0).toUpperCase() + cat.slice(1)}
-          </button>
-        ))}
-      </div> */}
-       {/* Tabs */}
-  {/* <div className="flex flex-wrap justify-center gap-3 mb-10">
-    {categories.map((cat) => (
-      <button
-        key={cat}
-        onClick={() => setActiveCategory(cat)}
-        className={`flex items-center gap-2 px-3 py-2 sm:px-6 sm:py-3 rounded-full border text-sm sm:text-lg font-semibold transition 
-          ${
-            activeCategory === cat
-              ? "bg-blue-500 text-white shadow-md"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-          }`}
-      > */}
-        {/* Icon always visible */}
-        {/* <span className="text-lg">add icon here later<FaCode/></span> */}
-
-        {/* Text only visible from sm breakpoint */}
-        {/* <span className="hidden sm:inline">
-          {cat.charAt(0).toUpperCase() + cat.slice(1)}
-        </span>
-      </button>
-    ))}
-  </div> */}
-<div className="flex justify-center space-x-4 mb-6">
-  {categories.map((cat) => (
-    <button
-      key={cat}
-      onClick={() => setActiveCategory(cat)}
-      className={`flex items-center justify-center w-12 h-12 md:w-auto md:h-auto 
+            className={`flex items-center justify-center w-12 h-12 md:w-auto md:h-auto 
         px-0 md:px-6 py-0 md:py-3 rounded-full border text-lg font-semibold transition
         ${
           activeCategory === cat
             ? "bg-blue-500 text-white shadow-md"
             : "bg-gray-200 text-gray-700 hover:bg-gray-300"
         }`}
-    >
-      {/* Icon */}
-      <span className="text-xl">{categoryIcons[cat]}</span>
+          >
+            {/* Icon */}
+            <span className="text-xl">{categoryIcons[cat]}</span>
 
-      {/* Show text only on md+ screens */}
-      <span className="hidden md:inline ml-2">
-        {cat.charAt(0).toUpperCase() + cat.slice(1)}
-      </span>
-    </button>
-  ))}
-</div>
+            {/* Show text only on md+ screens */}
+            <span className="hidden md:inline ml-2">
+              {cat.charAt(0).toUpperCase() + cat.slice(1)}
+            </span>
+          </button>
+        ))}
+      </div>
 
-{/* On mobile: show selected category name under icons */}
-{/* <p className="text-center text-white font-semibold md:hidden mb-6">
+      {/* On mobile: show selected category name under icons */}
+      {/* <p className="text-center text-white font-semibold md:hidden mb-6">
   {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
 </p> */}
 
-<p className=" text-sm bg-gradient-to-r from-cyan-400   to-emerald-500 bg-clip-text text-transparent md:text-2xl  mb-12  mt-4 text-center transition duration-200 ">
-  {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
+      <p className=" text-sm bg-gradient-to-r from-cyan-400   to-emerald-500 bg-clip-text text-transparent md:text-2xl  mb-12  mt-4 text-center transition duration-200 ">
+        {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
       </p>
       <div
         className="grid 

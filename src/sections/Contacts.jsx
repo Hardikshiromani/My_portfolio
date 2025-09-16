@@ -54,27 +54,29 @@ const Contacts = () => {
       <div
         className="absolute -left-10 md:-left-32 lg:-left-48 top-1/2 -translate-y-1/2 
              h-80 w-80 md:h-96 md:w-96 rounded-full 
-             bg-blue-500/30 blur-3xl"
+             bg-blue-500/30 blur-3xl pointer-events-none"
       ></div>
 
       <div
         className="absolute -right-10 md:-right-32 lg:-rightt-48 top-1/2 -translate-y-1/2 
              h-80 w-80 md:h-96 md:w-96 rounded-full 
-             bg-cyan-500/30 blur-3xl"
+             bg-cyan-500/30 blur-3xl pointer-events-none"
       ></div>
-      <h2 className=" text-xl bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">
+      {/* <h2 className=" text-xl bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">
         Contacts
-      </h2>
+      </h2> */}
+    <h2 className="text-4xl md:text-6xl font-semibold mb-8 bg-gradient-to-r from-blue-600 via-cyan-400  to-emerald-500 bg-clip-text text-transparent mt-4">Contacts</h2>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-5xl mt-10">
         {/* Connect with Me */}
         <div className="flex flex-col items-center text-center px-4">
-          <h2 className="text-2xl font-semibold text-cyan-400 mb-6">
+          <h2 className="text-2xl font-semibold text-blue-600 mb-6">
             Connect with Me
           </h2>
           <div className="flex items-center justify-center gap-6 flex-wrap">
             <a
               href="mailto:your.email@example.com"
-              className="p-4 bg-cyan-500 rounded-full hover:bg-cyan-600 transition text-white text-2xl"
+              className="p-4 bg-blue-600 rounded-full hover:bg-cyan-600 transition text-white text-2xl"
             >
               <MdOutlineEmail />
             </a>
@@ -107,7 +109,7 @@ const Contacts = () => {
 
         {/* Send a Message */}
         <div className="flex flex-col items-center text-center px-4">
-          <h2 className="text-2xl font-semibold text-purple-400 mb-6">
+          <h2 className="text-2xl font-semibold text-cyan-400 mb-6">
             Send a Message
           </h2>
           <form
@@ -141,7 +143,7 @@ const Contacts = () => {
             ></textarea>
             <button
               type="submit"
-              className="px-6 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition"
+              className="px-6 py-2 bg-cyan-600 text-white rounded-md hover:bg-cyan-700 transition"
             >
               Send Message
             </button>

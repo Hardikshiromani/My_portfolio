@@ -51,6 +51,8 @@ const ProjectsSection = () => {
       className="relative overflow-x-hidden inset-0 min-h-screen w-screen bg-gray-950  text-white flex flex-col items-center px-6 py-16 gap-6"
 
      >
+    <h2 className="text-4xl md:text-6xl font-semibold mb-8 bg-gradient-to-r from-blue-600 via-cyan-400  to-emerald-500 bg-clip-text text-transparent mt-4">Projects</h2>
+
       {/* <h2 className="text-4xl  text-center mb-14 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent transition duration-200">My Projects</h2> */}
        {/* <div className="relative inset-0 overflow-hidden pointer-events-none"> */}
     {/* Left semicircle */}
@@ -83,7 +85,7 @@ const ProjectsSection = () => {
   <div  className="absolute -right-10 md:-right-32 lg:-rightt-48 top-1/2 -translate-y-1/2 
              h-80 w-80 md:h-96 md:w-96 rounded-full 
              bg-cyan-500/30 blur-3xl"></div> 
-    <h3 className=" text-xl bg-gradient-to-r from-cyan-400 to-green-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">Projects</h3>
+    {/* <h3 className=" text-xl bg-gradient-to-r from-cyan-400 to-green-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">Projects</h3> */}
  
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto px-4">
       {/* <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8 max-w-4xl mx-auto px-4"> */}
