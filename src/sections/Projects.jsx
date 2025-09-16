@@ -17,7 +17,7 @@ const projects = [
   {
     title: "ChatWorld",
     image: Chat,
-    tech: "React.js, Express.js,Node js,Firebase,JWL,Mysql,bootstrap",
+    tech: "React.js, Express.js,Node js,Firebase,JWT,Mysql,bootstrap",
     description:
       "ChatWorld is a real time chat web application where user can create their profile with mobile numbers and chat with another user in real time and they can do polling based messasging",
      code:"https://github.com/Hardikshiromani/Project_ChatWorld" ,
@@ -87,7 +87,7 @@ const ProjectsSection = () => {
              bg-cyan-500/30 blur-3xl"></div> 
     {/* <h3 className=" text-xl bg-gradient-to-r from-cyan-400 to-green-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">Projects</h3> */}
  
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto px-4" data-aos="fade-up">
       {/* <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8 max-w-4xl mx-auto px-4"> */}
       {/* <div className="flex flex-row gap-10 max-w-3xl mx-auto px-4"> */}
 
@@ -96,7 +96,7 @@ const ProjectsSection = () => {
             key={index}
             // className="bg-black/60 border border-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-cyan-500/40 hover:scale-105 transform transition duration-300"
             className="bg-black/60 border border-gray-700 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-cyan-500/40 flex flex-col"
-
+  data-aos="fade-up"
           >
             <img
               src={project.image}

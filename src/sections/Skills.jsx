@@ -37,7 +37,7 @@ const Skills = () => {
   <div  className="absolute -right-10 md:-right-32 lg:-rightt-48 top-1/2 -translate-y-1/2 
              h-80 w-80 md:h-96 md:w-96 rounded-full 
              bg-cyan-500/30 blur-3xl"></div> 
-      <div className="max-w-6xl mx-auto px-6">
+      <div  className="max-w-6xl mx-auto px-6">
       <SkillsSection/>
   
 

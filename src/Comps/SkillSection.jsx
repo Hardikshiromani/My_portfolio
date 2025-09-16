@@ -160,7 +160,7 @@ const SkillsSection = () => {
       },
       {
         icon: <i class="devicon-git-plain colored"></i>,
-        name: "git",
+        name: "Git",
         level: 75,
         color: "bg-gray-900",
         barColor: "bg-orange-500",
@@ -168,7 +168,7 @@ const SkillsSection = () => {
       },
       {
         icon: <i class="devicon-github-original"></i>,
-        name: "github",
+        name: "Github",
         level: 80,
         color: "bg-gray-900",
         barColor: "bg-white",
@@ -186,7 +186,7 @@ const SkillsSection = () => {
       },
       {
         icon: <i class="devicon-netlify-plain colored"></i>,
-        name: "netlify,",
+        name: "Netlify,",
         level: 70,
         color: "bg-gray-900",
         barColor: "bg-teal-400",
@@ -202,7 +202,7 @@ const SkillsSection = () => {
       },
       {
         icon: <i class="devicon-firebase-plain colored"></i>,
-        name: "firebase",
+        name: "Firebase",
         level: 70,
         color: "bg-gray-900",
         barColor: "bg-yellow-400",
@@ -231,7 +231,8 @@ const SkillsSection = () => {
         Skills
       </h2>
 
-      <div className="flex justify-center space-x-4 mb-6">
+              {/* data-aos="fade-right" */}
+      <div className="flex justify-center space-x-4 mb-6" data-aos="fade-right">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -270,11 +271,14 @@ const SkillsSection = () => {
       md:grid-cols-3 
       gap-4 sm:gap-6 
       max-w-6xl mx-auto px-2 sm:px-6"
+              data-aos="fade-right"
+
       >
         {skillsData[activeCategory].map((skill) => (
           <div
             key={skill.name}
             // className={`${skill.color} text-white p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl`}
+                data-aos="fade right"
             className={`${skill.color} text-white p-6 rounded-2xl shadow-lg border 
               transform transition duration-300 hover:scale-105 hover:shadow-2xl 
               ${skill.hoverColor}`}

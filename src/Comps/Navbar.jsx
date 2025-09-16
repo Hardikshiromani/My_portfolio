@@ -1,7 +1,6 @@
-
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react"; // npm install lucide-react
-
+import { FiDownload } from "react-icons/fi";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,7 +24,7 @@ const Navbar = () => {
         <li>
           <a
             href="#about"
-            className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:text-white transition duration-200"
+            className="text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent hover:text-white transition duration-200"
           >
             About
           </a>
@@ -33,7 +32,7 @@ const Navbar = () => {
         <li>
           <a
             href="#skills"
-            className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:text-white transition duration-200"
+            className="text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent hover:text-white transition duration-200"
           >
             Skills
           </a>
@@ -41,7 +40,7 @@ const Navbar = () => {
         <li>
           <a
             href="#projects"
-            className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:text-white transition duration-200"
+            className="text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent hover:text-white transition duration-200"
           >
             Projects
           </a>
@@ -49,10 +48,26 @@ const Navbar = () => {
         <li>
           <a
             href="#contacts"
-            className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:text-white transition duration-200"
+            className="text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent hover:text-white transition duration-200"
           >
             Contact
           </a>
+        </li>
+        <li>
+          {/* <button
+            
+            className="text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent hover:text-white transition duration-200"
+          >
+            Resume
+          </button> */}
+          <button
+            className="px-6 py-2 text-lg font-semibold rounded-full 
+             bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 
+             text-white shadow-lg hover:shadow-xl hover:opacity-90 
+             transition-all duration-300 flex items-center gap-2"
+          >
+            Resume <FiDownload className="text-xl" />
+          </button>
         </li>
       </ul>
 

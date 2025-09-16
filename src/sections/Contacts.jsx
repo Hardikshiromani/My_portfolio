@@ -65,9 +65,9 @@ const Contacts = () => {
       {/* <h2 className=" text-xl bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">
         Contacts
       </h2> */}
-    <h2 className="text-4xl md:text-6xl font-semibold mb-8 bg-gradient-to-r from-blue-600 via-cyan-400  to-emerald-500 bg-clip-text text-transparent mt-4">Contacts</h2>
+    <h2 data-aos="fade-up" className="text-4xl md:text-6xl font-semibold mb-8 bg-gradient-to-r from-blue-600 via-cyan-400  to-emerald-500 bg-clip-text text-transparent mt-4">Contacts</h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-5xl mt-10">
+      <div data-aos="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-5xl mt-10">
         {/* Connect with Me */}
         <div className="flex flex-col items-center text-center px-4">
           <h2 className="text-2xl font-semibold text-blue-600 mb-6">
@@ -108,7 +108,7 @@ const Contacts = () => {
         </div>
 
         {/* Send a Message */}
-        <div className="flex flex-col items-center text-center px-4">
+        <div data-aos="fade-up" className="flex flex-col items-center text-center px-4">
           <h2 className="text-2xl font-semibold text-cyan-400 mb-6">
             Send a Message
           </h2>
