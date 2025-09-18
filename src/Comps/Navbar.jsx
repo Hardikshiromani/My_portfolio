@@ -60,14 +60,16 @@ const Navbar = () => {
           >
             Resume
           </button> */}
-          <button
+          <a
+            href="/resume.pdf"
+            download="My__Resume-1.pdf"
             className="px-6 py-2 text-lg font-semibold rounded-full 
              bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 
              text-white shadow-lg hover:shadow-xl hover:opacity-90 
              transition-all duration-300 flex items-center gap-2"
           >
             Resume <FiDownload className="text-xl" />
-          </button>
+          </a>
         </li>
       </ul>
 
@@ -80,7 +82,7 @@ const Navbar = () => {
       </button>
 
       {/* Mobile Dropdown */}
-      {isOpen && (
+      {/* {isOpen && (
         <ul className="absolute top-20 right-6 bg-gray-900 p-6 rounded-xl shadow-lg space-y-4 md:hidden">
           <li>
             <a
@@ -128,6 +130,79 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+      )} */}
+      {/* Mobile Dropdown */}
+      {isOpen && (
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm md:hidden">
+          <ul className="absolute top-20 left-0 w-full bg-gray-900 p-8 space-y-6 shadow-lg">
+            <li>
+              <a
+                href="#home"
+                // className="block text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent  transition duration-200 hover:text-white"
+                 className="block text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent transition duration-200"
+    style={{
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                className="block text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent  transition duration-200 hover:text-white"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#skills"
+                className="block text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent hover:text-white transition duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Skills
+              </a>
+            </li>
+            <li>
+              <a
+                href="#projects"
+                className="block text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent hover:text-white transition duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contacts"
+                className="block text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent hover:text-white transition duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="/resume.pdf"
+                download="My__Resume-1.pdf"
+                // className="px-6 py-2 text-lg font-semibold rounded-full
+                //  bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500
+                //  text-white shadow-lg hover:shadow-xl hover:opacity-90
+                //  transition-all duration-300 flex items-center gap-2 text-center"
+                className="px-6 py-2 text-lg font-semibold rounded-full 
+bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 
+text-white shadow-lg hover:shadow-xl hover:opacity-90 
+transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Resume <FiDownload className="text-xl" />
+              </a>
+            </li>
+          </ul>
+        </div>
       )}
     </nav>
   );

@@ -160,20 +160,20 @@ const WavesHero = () => {
           transition={{ duration: 1 }}
           className="mx-auto max-w-3xl space-y-8"
         >
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-            Hello I'm
+          <h1 className="text-4xl font-semibold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+            Hello I'm Hardik
           </h1>
-          {/* <p className="mx-auto max-w-2xl text-muted text-gray-400 sm:text-xl">
-            Nuestra plataforma le permite a tu negocio tener acceso a rieles de
-            pagos internacionales en segundos en vez de horas
-          </p> */}
-          <div className="text-4xl font-bold mb-6 text-green-400">
+    
+          <div
+            //  className="text-4xl font-bold mb-6 text-cyan-400"
+            className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-500 via-cyan-400  to-emerald-400 bg-clip-text text-transparent"
+          >
             <Typewriter
               options={{
                 strings: [
                   "Full Stack Web Developer",
-                  "React Enthusiast",
-                  "API Architect",
+                  "React.js Developer",
+                  "Backend API Developer",
                 ],
                 autoStart: true,
                 loop: true,
@@ -183,25 +183,23 @@ const WavesHero = () => {
           </div>
           <div className="flex justify-center space-x-4">
             <Button className="bg-gradient-to-r from-cyan-400 to-violet-500 text-lg text-black hover:from-cyan-500 hover:to-violet-600">
-
               <a
                 href="#projects"
                 // className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:text-white transition duration-200"
               >
-              See Projects
-
-              {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
+                See Projects
+                {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
               </a>
             </Button>
             <Button
               variant="outline"
-              className="border-white/10 text-lg text-white hover:bg-white/10"
+              className="border-white/10 text-lg text-white hover:to-white"
             >
               <a
                 href="#contacts"
                 // className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:text-white transition duration-200"
               >
-              Connect
+                Connect
               </a>
             </Button>
           </div>

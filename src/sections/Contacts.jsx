@@ -35,22 +35,7 @@ const Contacts = () => {
       id="contacts"
       className="relative overflow-x-hidden inset-0 min-h-screen w-screen bg-gray-950  text-white flex flex-col items-center px-6 py-16 gap-6"
     >
-      {/* Background Semi Circles */}
-      {/* <div className="absolute top-10 -left-20 w-72 h-72 bg-gradient-to-tr from-cyan-500/40 to-purple-600/40 rounded-full blur-3xl animate-pulse"></div> */}
-      {/* <div className="absolute bottom-10 -right-20 w-72 h-72 bg-gradient-to-bl from-purple-500/40 to-cyan-600/40 rounded-full blur-3xl animate-pulse"></div> */}
-      {/* <h1 className="text-4xl md:text-6xl font-bold mb-12 text-blue-400 mt-5">Contact Me</h1> */}
-
-      {/* <div className="absolute left-0 top-1/2 -translate-y-1/2 
-                  w-72 h-72 rounded-sm
-                  bg-gradient-to-r from-blue-500/30 to-transparent 
-                  blur-3xl"></div> */}
-
-      {/* Right semicircle */}
-      {/* <div className="absolute right-0 top-1/2 -translate-y-1/2 
-                  w-72 h-72 rounded-full
-                  bg-gradient-to-l from-cyan-500/30 to-transparent 
-                  blur-3xl"></div> */}
-
+     
       <div
         className="absolute -left-10 md:-left-32 lg:-left-48 top-1/2 -translate-y-1/2 
              h-80 w-80 md:h-96 md:w-96 rounded-full 
@@ -62,12 +47,18 @@ const Contacts = () => {
              h-80 w-80 md:h-96 md:w-96 rounded-full 
              bg-cyan-500/30 blur-3xl pointer-events-none"
       ></div>
-      {/* <h2 className=" text-xl bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">
+      
+      <h2
+        data-aos="fade-up"
+        className="text-4xl md:text-6xl font-semibold mb-8 bg-gradient-to-r from-blue-600 via-cyan-400  to-emerald-500 bg-clip-text text-transparent mt-4"
+      >
         Contacts
-      </h2> */}
-    <h2 data-aos="fade-up" className="text-4xl md:text-6xl font-semibold mb-8 bg-gradient-to-r from-blue-600 via-cyan-400  to-emerald-500 bg-clip-text text-transparent mt-4">Contacts</h2>
+      </h2>
 
-      <div data-aos="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-5xl mt-10">
+      <div
+        data-aos="fade-up"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-5xl mt-10"
+      >
         {/* Connect with Me */}
         <div className="flex flex-col items-center text-center px-4">
           <h2 className="text-2xl font-semibold text-blue-600 mb-6">
@@ -75,7 +66,7 @@ const Contacts = () => {
           </h2>
           <div className="flex items-center justify-center gap-6 flex-wrap">
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:hardikshiromani786@gmail.com"
               className="p-4 bg-blue-600 rounded-full hover:bg-cyan-600 transition text-white text-2xl"
             >
               <MdOutlineEmail />
@@ -108,7 +99,10 @@ const Contacts = () => {
         </div>
 
         {/* Send a Message */}
-        <div data-aos="fade-up" className="flex flex-col items-center text-center px-4">
+        <div
+          data-aos="fade-up"
+          className="flex flex-col items-center text-center px-4"
+        >
           <h2 className="text-2xl font-semibold text-cyan-400 mb-6">
             Send a Message
           </h2>
@@ -148,7 +142,14 @@ const Contacts = () => {
               Send Message
             </button>
           </form>
+         
         </div>
+         <footer className="w-full bg-gray-950 text-gray-400 py-6 text-left mt-10">
+            <p className="text-sm">
+              © {new Date().getFullYear()} Hardik Shiromani. All rights
+              reserved.
+            </p>
+          </footer>
       </div>
     </section>
   );

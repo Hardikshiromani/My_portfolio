@@ -3,7 +3,7 @@ import React from "react";
 import Todo from "../assets/Todo.png"
 import Weather from "../assets/Weather.png"
 import Chat from "../assets/Chat.png"
-
+import Portfolio from "../assets/Portfolio.png"
 const projects = [
   {
     title: "TodoList",
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     title: "Portfolio Website",
-    image: "/images/portfolio.png",
+    image: Portfolio,
     tech: "React.js, Tailwind CSS",
     description:
       "A modern responsive portfolio website showcasing my skills, projects, and achievements with interactive UI and smooth animations.",

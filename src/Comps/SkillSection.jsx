@@ -23,23 +23,24 @@ const SkillsSection = () => {
       {
         icon: <i className="devicon-cplusplus-plain colored"></i>,
         name: "C++",
-        level: 75,
+        level: 90,
         color: "bg-gray-900",
         barColor: "bg-gradient-to-r from-sky-400 via-sky-500 to-sky-600",
         hoverColor: "hover:border-blue-400 hover:shadow-blue-400/50",
       },
       {
-        icon: <i className="devicon-python-plain-wordmark colored"></i>,
-        name: "Python",
-        level: 80,
+        icon: <i className="devicon-java-plain colored"></i>,
+        name: "Java",
+        level: 75,
         color: "bg-gray-900",
-        barColor: "bg-gradient-to-r from-yellow-300 via-yellow-500 to-blue-700",
-        hoverColor: "hover:border-sky-400 hover:shadow-sky-400/50",
+        barColor:
+          "bg-gradient-to-r from-amber-400 via-orange-500 to-orange-600 ",
+        hoverColor: "hover:border-yellow-400 hover:shadow-yellow-400/50",
       },
       {
         icon: <i className="devicon-c-original colored"></i>,
         name: "C",
-        level: 87,
+        level: 95,
         color: "bg-gray-900",
         barColor: "bg-slate-400",
         hoverColor: "hover:border-slate-400 hover:shadow-slate-400/50",
@@ -62,13 +63,12 @@ const SkillsSection = () => {
         hoverColor: "hover:border-sky-400 hover:shadow-sky-400/50",
       },
       {
-        icon: <i className="devicon-java-plain colored"></i>,
-        name: "Java",
-        level: 65,
+        icon: <i className="devicon-python-plain-wordmark colored"></i>,
+        name: "Python",
+        level: 60,
         color: "bg-gray-900",
-        barColor:
-          "bg-gradient-to-r from-amber-400 via-orange-500 to-orange-600 ",
-        hoverColor: "hover:border-yellow-400 hover:shadow-yellow-400/50",
+        barColor: "bg-gradient-to-r from-yellow-300 via-yellow-500 to-blue-700",
+        hoverColor: "hover:border-sky-400 hover:shadow-sky-400/50",
       },
     ],
     libraries: [
@@ -108,7 +108,7 @@ const SkillsSection = () => {
       {
         icon: <i className="devicon-socketio-original colored"></i>,
         name: "Socket.io",
-        level: 85,
+        level: 75,
         color: "bg-gray-900",
         barColor:
           "bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600",
@@ -119,7 +119,7 @@ const SkillsSection = () => {
       {
         icon: <i className="devicon-mysql-plain-wordmark colored"></i>,
         name: "MySQL",
-        level: 70,
+        level: 80,
         color: "bg-gray-900",
         barColor: "bg-gradient-to-r from-sky-400 via-orange-500 to-orange-400",
         hoverColor: "hover:border-orange-400 hover:shadow-sky-400/50",
@@ -175,7 +175,7 @@ const SkillsSection = () => {
         hoverColor: "hover:border-white-400 hover:shadow-white-400/50",
       },
     ],
-    PlatformsServices: [
+    PlatformsAndServices: [
       {
         icon: <i class="devicon-vercel-original"></i>,
         name: "Vercel,",
@@ -187,7 +187,7 @@ const SkillsSection = () => {
       {
         icon: <i class="devicon-netlify-plain colored"></i>,
         name: "Netlify,",
-        level: 70,
+        level: 60,
         color: "bg-gray-900",
         barColor: "bg-teal-400",
         hoverColor: "hover:border-teal-300 hover:shadow-teal-400/50",
@@ -203,7 +203,7 @@ const SkillsSection = () => {
       {
         icon: <i class="devicon-firebase-plain colored"></i>,
         name: "Firebase",
-        level: 70,
+        level: 75,
         color: "bg-gray-900",
         barColor: "bg-yellow-400",
         hoverColor: "hover:border-yellow-400 hover:shadow-yellow-400/50",
@@ -216,7 +216,7 @@ const SkillsSection = () => {
     libraries: <IoExtensionPuzzleOutline />, // 🧩
     ToolsAndEnvironment: <VscTools />, // 🧰
     databases: <FiDatabase />,
-    PlatformsServices: <GiPlatform />,
+    PlatformsAndServices: <GiPlatform />,
   };
   const categories = Object.keys(skillsData);
 
@@ -227,11 +227,11 @@ const SkillsSection = () => {
     >
       {/* <h2 className="text-4xl md:text-6xl font-semibold mb-8 bg-gradient-to-r from-blue-600 via-cyan-400  to-emerald-500 bg-clip-text text-transparent mt-4">About Me</h2> */}
 
-      <h2 className=" text-4xl bg-gradient-to-r from-blue-600   to-emerald-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">
+      {/* <h2 className=" relative z-10 text-4xl bg-gradient-to-r from-blue-600   to-emerald-500 bg-clip-text text-transparent md:text-6xl  mb-12  mt-4 text-center transition duration-200 ">
         Skills
-      </h2>
+      </h2> */}
 
-              {/* data-aos="fade-right" */}
+      {/* data-aos="fade-right" */}
       <div className="flex justify-center space-x-4 mb-6" data-aos="fade-right">
         {categories.map((cat) => (
           <button
@@ -256,12 +256,7 @@ const SkillsSection = () => {
         ))}
       </div>
 
-      {/* On mobile: show selected category name under icons */}
-      {/* <p className="text-center text-white font-semibold md:hidden mb-6">
-  {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
-</p> */}
-
-      <p className=" text-sm bg-gradient-to-r from-cyan-400   to-emerald-500 bg-clip-text text-transparent md:text-2xl  mb-12  mt-4 text-center transition duration-200 ">
+      <p className=" text-sm text-cyan-400  md:text-3xl  mb-12  mt-4 text-center transition duration-200 ">
         {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
       </p>
       <div
@@ -271,14 +266,13 @@ const SkillsSection = () => {
       md:grid-cols-3 
       gap-4 sm:gap-6 
       max-w-6xl mx-auto px-2 sm:px-6"
-              data-aos="fade-right"
-
+        data-aos="fade-right"
       >
         {skillsData[activeCategory].map((skill) => (
           <div
             key={skill.name}
             // className={`${skill.color} text-white p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl`}
-                data-aos="fade right"
+            data-aos="fade right"
             className={`${skill.color} text-white p-6 rounded-2xl shadow-lg border 
               transform transition duration-300 hover:scale-105 hover:shadow-2xl 
               ${skill.hoverColor}`}
