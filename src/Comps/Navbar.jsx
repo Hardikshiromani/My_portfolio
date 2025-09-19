@@ -61,8 +61,8 @@ const Navbar = () => {
             Resume
           </button> */}
           <a
-            href="/resume.pdf"
-            download="My__Resume-1.pdf"
+            href="/My_Resume2.pdf"
+            download="Hardik_Resume.pdf"
             className="px-6 py-2 text-lg font-semibold rounded-full 
              bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 
              text-white shadow-lg hover:shadow-xl hover:opacity-90 
@@ -82,56 +82,6 @@ const Navbar = () => {
       </button>
 
       {/* Mobile Dropdown */}
-      {/* {isOpen && (
-        <ul className="absolute top-20 right-6 bg-gray-900 p-6 rounded-xl shadow-lg space-y-4 md:hidden">
-          <li>
-            <a
-              href="#home"
-              className="block text-lg font-semibold text-white hover:text-cyan-400"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              className="block text-lg font-semibold text-white hover:text-cyan-400"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#skills"
-              className="block text-lg font-semibold text-white hover:text-cyan-400"
-              onClick={() => setIsOpen(false)}
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              className="block text-lg font-semibold text-white hover:text-cyan-400"
-              onClick={() => setIsOpen(false)}
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contacts"
-              className="block text-lg font-semibold text-white hover:text-cyan-400"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      )} */}
-      {/* Mobile Dropdown */}
       {isOpen && (
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm md:hidden">
           <ul className="absolute top-20 left-0 w-full bg-gray-900 p-8 space-y-6 shadow-lg">
@@ -139,11 +89,11 @@ const Navbar = () => {
               <a
                 href="#home"
                 // className="block text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent  transition duration-200 hover:text-white"
-                 className="block text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent transition duration-200"
-    style={{
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-    }}
+                className="block text-xl font-semibold bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent transition duration-200"
+                style={{
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
                 onClick={() => setIsOpen(false)}
               >
                 Home
@@ -187,16 +137,12 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="/resume.pdf"
-                download="My__Resume-1.pdf"
-                // className="px-6 py-2 text-lg font-semibold rounded-full
-                //  bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500
-                //  text-white shadow-lg hover:shadow-xl hover:opacity-90
-                //  transition-all duration-300 flex items-center gap-2 text-center"
+                href="/My_Resume2.pdf"
+                download="Hardik_Resume.pdf"
                 className="px-6 py-2 text-lg font-semibold rounded-full 
-bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 
-text-white shadow-lg hover:shadow-xl hover:opacity-90 
-transition-all duration-300 flex items-center justify-center gap-2"
+  bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 
+  text-white shadow-lg hover:shadow-xl hover:opacity-90 
+  transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Resume <FiDownload className="text-xl" />
               </a>

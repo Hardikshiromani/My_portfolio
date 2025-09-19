@@ -103,7 +103,7 @@ const Contacts = () => {
           data-aos="fade-up"
           className="flex flex-col items-center text-center px-4"
         >
-          <h2 className="text-2xl font-semibold text-cyan-400 mb-6">
+          <h2 className="text-2xl font-semibold text-emerald-500 mb-6">
             Send a Message
           </h2>
           <form
@@ -137,7 +137,7 @@ const Contacts = () => {
             ></textarea>
             <button
               type="submit"
-              className="px-6 py-2 bg-cyan-600 text-white rounded-md hover:bg-cyan-700 transition"
+              className="px-6 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-500 transition"
             >
               Send Message
             </button>
