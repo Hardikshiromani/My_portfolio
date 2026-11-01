@@ -61,8 +61,8 @@ const Navbar = () => {
             Resume
           </button> */}
           <a
-            href="/My_Resume2.pdf"
-            download="Hardik_Resume.pdf"
+            href="/Resume.pdf"
+            download="Resume.pdf"
             className="px-6 py-2 text-lg font-semibold rounded-full 
              bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-500 
              text-white shadow-lg hover:shadow-xl hover:opacity-90 

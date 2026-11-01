@@ -2,32 +2,17 @@ import React from 'react'
 
 const About = () => {
   return (
-    // <section
-    //     id="about"
-    //     className=" inset-0 min-h-screen w-screen bg-gray-900 text-white flex flex-col"
-    //   >
+    
     <section
   id="about"
    className=" relative overflow-x-hidden inset-0 min-h-screen w-screen bg-gray-950 text-white flex flex-col items-center px-6 py-16 gap-6"
 >
-   {/* <div className="absolute top-10 -left-20 w-72 h-72 bg-gradient-to-tr from-cyan-500/40 to-purple-600/40 rounded-full blur-3xl animate-pulse"></div> */}
-  {/* <div className="absolute top-10 -right-20 w-72 h-72 bg-gradient-to-bl from-green-500/40 to-cyan-600/40 rounded-full blur-3xl animate-pulse"></div> */}
- 
- 
-
-{/* <div className="absolute left-0 top-1/2 -translate-y-1/2 
-                  w-72 h-72 rounded-sm
-                  bg-gradient-to-r from-blue-500/30 to-transparent 
-                  blur-3xl"></div> */}
+  
 
 <div  className="absolute -left-10 md:-left-32 lg:-left-48 top-1/2 -translate-y-1/2 
              h-80 w-80 md:h-96 md:w-96 rounded-full 
              bg-blue-500/30 blur-3xl"></div>
-  {/* Right semicircle */}
-  {/* <div className="absolute right-0 top-1/2 -translate-y-1/2 
-                  w-72 h-72 rounded-sm
-                  bg-gradient-to-l from-cyan-500/30 to-transparent 
-                  blur-3xl"></div> */}
+
 
   <div  className="absolute -right-10 md:-right-32 lg:-rightt-48 top-1/2 -translate-y-1/2 
              h-80 w-80 md:h-96 md:w-96 rounded-full 
@@ -43,9 +28,7 @@ These projects taught me not only how to write functional code, but also how to 
 I’m methodical in troubleshooting, collaborative in design, and always chasing that “click” moment — when everything comes together visually and logically.
 I’m currently seeking opportunities as a Full-Stack Developer, Frontend Engineer, or API Architect. If you’re building something bold, creative, or technically challenging, I’d love to contribute.
 </p> 
-    {/* </div> */}
-{/* <h2 className="text-4xl font-bold text-cyan-400 mb-6">Soft Skills</h2>
- */}
+    
     <h5 data-aos="fade-up" className="text-4xl md:text-6xl font-semibold mb-12 text-cyan-400 mt-4">Soft Skills</h5>
 
 <div data-aos="fade-up" className="flex flex-wrap justify-center gap-6">
@@ -58,8 +41,7 @@ I’m currently seeking opportunities as a Full-Stack Developer, Frontend Engine
     </div>
   ))}
 </div>
-    {/* Repeat for other skills */}
-  {/* </div> */}
+   
 
     </section>
   )
